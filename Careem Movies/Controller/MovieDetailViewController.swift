@@ -19,10 +19,11 @@ class MovieDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         navigationItem.title = "Movie Details"
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         let posterPath = movie?.poster_path
         if posterPath != nil {
@@ -35,7 +36,6 @@ class MovieDetailViewController: UIViewController {
             }
         }
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -100,6 +100,5 @@ extension MovieDetailViewController : UITableViewDataSource, UITableViewDelegate
         
         return cell
     }
-    
-    
+
 }

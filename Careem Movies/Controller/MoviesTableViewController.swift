@@ -20,12 +20,15 @@ class MoviesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.contentInset = UIEdgeInsets(top: -1, left: 0, bottom: 0, right: 0)
+        
+        // Activity Indicator init
         activityIndicator.activityIndicatorViewStyle = .whiteLarge
         activityIndicator.center = view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.color = UIColor(red: 75.0/255.0, green: 161.0/255.0, blue: 69.0/255.0, alpha: 1.0)
         view.addSubview(activityIndicator)
         
+        // Search Controller init and customization
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Movies"
         searchController.searchBar.delegate = self
@@ -44,8 +47,6 @@ class MoviesTableViewController: UITableViewController {
 
         if #available(iOS 11.0, *) {
             navigationItem.hidesSearchBarWhenScrolling = false
-        }
-        if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
         } else {
             tableView.tableHeaderView = searchController.searchBar
@@ -123,6 +124,8 @@ class MoviesTableViewController: UITableViewController {
         return true
     }
     
+    // MARK: - Helper functions
+    
     func fetchSearchHistory(){
         movies.removeAll()
         successfulSearchArray.removeAll()
@@ -139,6 +142,8 @@ class MoviesTableViewController: UITableViewController {
             self.activityIndicator.stopAnimating()
             
             if movieResults != nil {
+                self.totalPages = totalPages!
+                
                 if self.pageNumber == 1 {
                     if self.successfulSearchArray.contains(self.movieName){
                         let index = self.successfulSearchArray.index(of: self.movieName)
@@ -152,8 +157,7 @@ class MoviesTableViewController: UITableViewController {
                         }
                     }
                 }
-                self.totalPages = totalPages!
-                //                self.movies = movieResults!
+
                 if (movieResults?.count)! > 0 {
                     self.movies.append(contentsOf: movieResults!)
                     self.tableView.reloadData()
@@ -162,13 +166,13 @@ class MoviesTableViewController: UITableViewController {
                     self.tableView.reloadData()
                     let alertController = UIAlertController(title: nil, message: "Unfortunately, There is no movie name '\(self.movieName)'!", preferredStyle: .alert)
                     
-                    // Create the actions
+                    // Create action
                     let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default) {
                         UIAlertAction in
                         alertController.dismiss(animated: true, completion: nil)
                     }
                     
-                    // Add the actions
+                    // Add action
                     alertController.addAction(okAction)
                     
                     // Present the controller
@@ -178,13 +182,13 @@ class MoviesTableViewController: UITableViewController {
                 self.activityIndicator.stopAnimating()
                 let alertController = UIAlertController(title: "No internet connection!", message: "Please check your internet connection and try again!", preferredStyle: .alert)
                 
-                // Create the actions
+                // Create action
                 let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default) {
                     UIAlertAction in
                     alertController.dismiss(animated: true, completion: nil)
                 }
                 
-                // Add the actions
+                // Add action
                 alertController.addAction(okAction)
                 
                 // Present the controller

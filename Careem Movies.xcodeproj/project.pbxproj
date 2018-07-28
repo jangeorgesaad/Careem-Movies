@@ -107,14 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				4E166151210B04F600398646 /* AppDelegate.swift */,
-				4E166155210B04F600398646 /* Main.storyboard */,
 				4E16615B210B04F800398646 /* Assets.xcassets */,
+				4E166155210B04F600398646 /* Main.storyboard */,
 				4E16615D210B04F800398646 /* LaunchScreen.storyboard */,
 				4E166160210B04F800398646 /* Info.plist */,
-				4EF746D8210B8601002C0851 /* MoviesTableViewController.swift */,
-				4EF746DB210B88F8002C0851 /* Movie.swift */,
-				4EC9E23D210B965700CE58D0 /* API.swift */,
-				4EC9E241210BB69A00CE58D0 /* MovieDetailViewController.swift */,
+				4E6235E2210D0F9200142954 /* Controller */,
+				4E6235E3210D0FA200142954 /* Model */,
+				4E6235E4210D0FAB00142954 /* API */,
 			);
 			path = "Careem Movies";
 			sourceTree = "<group>";
@@ -126,6 +125,31 @@
 				4E16616B210B04F800398646 /* Info.plist */,
 			);
 			path = "Careem MoviesTests";
+			sourceTree = "<group>";
+		};
+		4E6235E2210D0F9200142954 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EF746D8210B8601002C0851 /* MoviesTableViewController.swift */,
+				4EC9E241210BB69A00CE58D0 /* MovieDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E6235E3210D0FA200142954 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EF746DB210B88F8002C0851 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E6235E4210D0FAB00142954 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4EC9E23D210B965700CE58D0 /* API.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		67D8B35BEA9B437E884915A0 /* Frameworks */ = {
