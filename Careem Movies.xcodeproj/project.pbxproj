@@ -11,7 +11,6 @@
 		4E166157210B04F600398646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E166155210B04F600398646 /* Main.storyboard */; };
 		4E16615C210B04F800398646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E16615B210B04F800398646 /* Assets.xcassets */; };
 		4E16615F210B04F800398646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E16615D210B04F800398646 /* LaunchScreen.storyboard */; };
-		4E16616A210B04F800398646 /* Careem_MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E166169210B04F800398646 /* Careem_MoviesTests.swift */; };
 		4EC9E23E210B965700CE58D0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9E23D210B965700CE58D0 /* API.swift */; };
 		4EC9E242210BB69A00CE58D0 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9E241210BB69A00CE58D0 /* MovieDetailViewController.swift */; };
 		4EF746D9210B8601002C0851 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF746D8210B8601002C0851 /* MoviesTableViewController.swift */; };
@@ -39,8 +38,6 @@
 		4E16615E210B04F800398646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E166160210B04F800398646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E166165210B04F800398646 /* Careem MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Careem MoviesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E166169210B04F800398646 /* Careem_MoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Careem_MoviesTests.swift; sourceTree = "<group>"; };
-		4E16616B210B04F800398646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC9E23D210B965700CE58D0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4EC9E241210BB69A00CE58D0 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		4EF746D8210B8601002C0851 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				4E166150210B04F600398646 /* Careem Movies */,
-				4E166168210B04F800398646 /* Careem MoviesTests */,
 				4E16614F210B04F600398646 /* Products */,
 				47CFBDEABDECC629FBD0E45A /* Pods */,
 				67D8B35BEA9B437E884915A0 /* Frameworks */,
@@ -116,15 +112,6 @@
 				4E6235E4210D0FAB00142954 /* API */,
 			);
 			path = "Careem Movies";
-			sourceTree = "<group>";
-		};
-		4E166168210B04F800398646 /* Careem MoviesTests */ = {
-			isa = PBXGroup;
-			children = (
-				4E166169210B04F800398646 /* Careem_MoviesTests.swift */,
-				4E16616B210B04F800398646 /* Info.plist */,
-			);
-			path = "Careem MoviesTests";
 			sourceTree = "<group>";
 		};
 		4E6235E2210D0F9200142954 /* Controller */ = {
@@ -336,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E16616A210B04F800398646 /* Careem_MoviesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
